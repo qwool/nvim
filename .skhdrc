@@ -1,0 +1,110 @@
+# # # windows
+# hyper - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+# hyper - q : yabai -m window --close
+#
+# # layout
+# shift + alt - b : yabai -m window --toggle border
+shift + lalt - f : yabai -m window --toggle native-fullscreen
+hyper - f : yabai -m window --toggle zoom-fullscreen
+# ctrl + alt - a : yabai -m space --layout bsp
+# ctrl + alt - d : yabai -m space --layout float
+# alt - j      : yabai -m window --focus next
+# alt - k      : yabai -m window --focus prev
+lalt - t      : yabai -m window --toggle float
+hyper - j      : yabai -m window --focus next
+hyper - k      : yabai -m window --focus prev
+lalt - v        :  yabai -m space --layout $(yabai -m query --spaces --space | jq -r '.type | if . == "bsp" then "float" else "bsp" end')
+
+# alt + shift - j      : yabai -m window --swap next
+# alt + shift - k      : yabai -m window --swap prev
+# # increase window size
+# alt - h : yabai -m window --resize right:-40:0
+# alt - l : yabai -m window --resize right:40:0
+# ctrl + alt - h : yabai -m window --resize left:-40:0
+# ctrl + alt - l : yabai -m window --resize left:40:0
+#
+# # hide unhide bar
+# hyper - b: yabai -m config external_bar all:0:0
+# hyper - v: yabai -m config external_bar all:0:20
+#
+# # spaces
+lalt - tab           : yabai -m space --focus recent
+# hyper-space         : yabai -m space --focus recent
+# hyper - space : \
+#   /Applications/kitty.app/Contents/MacOS/kitty ~/bin/launcher.sh &
+
+lalt - 1             : yabai -m space --focus 1
+lalt - 2             : yabai -m space --focus 2
+lalt - 3             : yabai -m space --focus 3
+lalt - 4             : yabai -m space --focus 4
+lalt - g             : yabai -m space --focus 5 # game
+lalt - r             : yabai -m space --focus 6 # reaper
+lalt - n             : yabai -m space --focus 7 # notes
+lalt - m             : yabai -m space --focus 8 # messaging
+lalt - 9             : yabai -m space --focus 9 # video
+lalt - i             : yabai -m display --focus recent
+lalt - o             : yabai -m space --display recent
+
+# follow focus as well
+ctrl + lalt - 1 : yabai -m window --space  1; yabai -m space --focus 1; yabai -m window --focus first
+ctrl + lalt - 2 : yabai -m window --space  2; yabai -m space --focus 2; yabai -m window --focus first
+ctrl + lalt - 3 : yabai -m window --space  3; yabai -m space --focus 3; yabai -m window --focus first
+ctrl + lalt - 4 : yabai -m window --space  4; yabai -m space --focus 4; yabai -m window --focus first
+ctrl + lalt - 5 : yabai -m window --space  5; yabai -m space --focus 5; yabai -m window --focus first
+ctrl + lalt - g : yabai -m window --space  g; yabai -m space --focus g; yabai -m window --focus first
+ctrl + lalt - r : yabai -m window --space  6; yabai -m space --focus 6; yabai -m window --focus first
+ctrl + lalt - n : yabai -m window --space  7; yabai -m space --focus 7; yabai -m window --focus first
+ctrl + lalt - m : yabai -m window --space  8; yabai -m space --focus 8; yabai -m window --focus first
+ctrl + lalt - 9 : yabai -m window --space  9; yabai -m space --focus 9; yabai -m window --focus first
+
+# alt - d : yabai -m window --toggle zoom-parent
+# ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+#
+# # windows
+# hyper - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+# hyper - q : yabai -m window --close
+#
+# # layout
+# shift + alt - b : yabai -m window --toggle border
+# shift + alt - f : yabai -m window --toggle native-fullscreen
+# hyper - f : yabai -m window --toggle zoom-fullscreen
+# ctrl + alt - a : yabai -m space --layout bsp
+# ctrl + alt - d : yabai -m space --layout float
+# alt - j      : yabai -m window --focus next
+# alt - k      : yabai -m window --focus prev
+# alt - t      : yabai -m window --toggle float
+# hyper - j      : yabai -m window --focus next
+# hyper - k      : yabai -m window --focus prev
+# alt + shift - j      : yabai -m window --swap next
+# alt + shift - k      : yabai -m window --swap prev
+# # increase window size
+# alt - h : yabai -m window --resize right:-40:0
+# alt - l : yabai -m window --resize right:40:0
+# ctrl + alt - h : yabai -m window --resize left:-40:0
+# ctrl + alt - l : yabai -m window --resize left:40:0
+#
+# # hide unhide bar
+# hyper - b: yabai -m config external_bar all:0:0
+# hyper - v: yabai -m config external_bar all:0:20
+#
+# # spaces
+# alt - tab           : yabai -m space --focus recent
+# # hyper-space         : yabai -m space --focus recent
+# hyper - space : \
+#   /Applications/kitty.app/Contents/MacOS/kitty ~/bin/launcher.sh &
+#
+# alt - 1             : yabai -m space --focus 1
+# alt - 2             : yabai -m space --focus 2
+# alt - 3             : yabai -m space --focus 3
+# alt - 4             : yabai -m space --focus 4
+# alt - g             : yabai -m space --focus 5 # game
+# alt - r             : yabai -m space --focus 6 # reaper
+# alt - n             : yabai -m space --focus 7 # notes
+# alt - m             : yabai -m space --focus 8 # messaging
+# alt - v             : yabai -m space --focus 9 # video
+# alt - i             : yabai -m display --focus recent
+# alt - o             : yabai -m space --display recent
+# # follow focus as well
+#
+# alt - d : yabai -m window --toggle zoom-parent
+# ctrl + alt - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"

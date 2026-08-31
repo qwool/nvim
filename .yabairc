@@ -1,0 +1,28 @@
+#!/bin/bash
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+yabai -m config layout              bsp
+yabai -m config mouse_action2       resize 
+yabai -m config mouse_follows_focus on     
+yabai -m config window_shadow       off
+yabai -m config window_gap          0
+yabai -m config window_border       off
+
+# yabai -m config mouse_modifier alt
+# yabai -m config mouse_action1 move
+# yabai -m mouse_action2 resize 
+# yabai -m mouse_drop_action swap
+# yabai -m config external_bar all:0:20
+
+yabai -m rule --add app="^FireFox$" space=^2
+yabai -m rule --add app="^Telegram$" space=^8
+yabai -m rule --add app="^Obsidian$" space=^7
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app=".*REAPER.*" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Godot$" manage=off
+yabai -m rule --add app="^kitty$" manage=off
+yabai -m config layout float

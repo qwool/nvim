@@ -1,0 +1,14 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "listDiagnostics",
+        "leave_snippet",
+        "Snacks"
+    ],
+    "diagnostics.disable": [
+        "undefined-field",
+        "missing-fields",
+        "redundant-parameter",
+        "undefined-global"
+    ]
+}
