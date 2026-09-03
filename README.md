@@ -2,6 +2,8 @@
 
 my dotfiles! all are quite minimal and get out of the way. try to keep your software on latest stable
 
+sister repo to [the bark colorscheme](https://github.com/if-not-nil/bark)
+
 as per tradition, feel free to chat in the issues section
 
 colorscheme: [https://github.com/if-not-nil/bark](https://github.com/if-not-nil/bark)
